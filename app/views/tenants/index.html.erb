@@ -1,0 +1,30 @@
+<div class= "container">
+  <div class="page-header">
+    <div class="pull-right">
+      <%= link_to "New Tenant", new_tenant_path, class: "btn btn-info" %>
+    </div>
+      <h1>Tenants</h1>
+    </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Unit</th>
+            <th>Lease Start</th>
+            <th>Lease End</th>
+          </tr>
+        </thead>
+        <% @tenants.each do |t| %>
+          <tr>
+            <td><%= t.name %>
+            </td>
+            <td><%= t.unit %>
+            </td>
+            <td><%= t.lease_start %>
+            </td>
+            <td><%= t.lease_end %>
+            </td>
+            <% end %>
+          </tr>
+      </table>
+    </div>

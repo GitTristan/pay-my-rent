@@ -20,9 +20,15 @@
             </td>
             <td><%= t.unit %>
             </td>
-            <td><%= t.lease_start %>
+            <td>
+                <% if t.lease_start %>
+                <%= t.lease_start.strftime("%m/%d/%Y") %>
+                <% end %>
             </td>
-            <td><%= t.lease_end %>
+            <td>
+                <% if t.lease_end %>
+                <%= t.lease_end.strftime("%m/%d/%Y") %>
+                <% end %>
             </td>
             <td><div class= "text-right">
            <%= link_to "Edit", edit_tenant_path(t), class: "btn btn-info" %>

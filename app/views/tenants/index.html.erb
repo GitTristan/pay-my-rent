@@ -24,7 +24,12 @@
             </td>
             <td><%= t.lease_end %>
             </td>
-            <% end %>
+            <td><div class= "text-right">
+           <%= link_to "Edit", edit_tenant_path(t), class: "btn btn-info" %>
+           <%= link_to "Delete", tenant_path(t), method: :delete, class: "btn btn-danger" %>
+         </div>
+         </td>
+         <% end %>
           </tr>
       </table>
     </div>

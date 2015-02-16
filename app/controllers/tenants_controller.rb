@@ -31,7 +31,7 @@ class TenantsController < ApplicationController
 
       if @tenant.update(tenant_params)
         flash[:notice] = "Tenant was successfully updated"
-        redirect_to tenant_path(@tenant)
+        redirect_to tenants_path
       else
         render :edit
       end
